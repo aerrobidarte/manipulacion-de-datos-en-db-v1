@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Películas ordenas por apellido</title>
+    <link rel='stylesheet' href='/css/style.css' />
+</head>
+<body>
+    <figure>
+        <img src="/img/logo-DH.png" alt="Logo Digital House">
+    </figure>
+    <h1>ACTORES ORDENADADOS POR APELLIDO</h1>
+    <ul>
+        <% for( let i = 0; i < actores.length; i++ ) { %>
+        <li>
+            <a href="/actores/detail/<%=actores[i].id%>"><%= actores[i].last_name %><%=" "%><%= actores[i].first_name %> </a> <br>
+            <!-- <%= 'RELEASE DATE: ' + actores[i].release_date %>  -->
+        </li>
+        <% } %>
+        
+    </ul>
+</body>
+</html>
